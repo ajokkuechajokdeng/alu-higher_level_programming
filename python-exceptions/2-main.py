@@ -23,6 +23,4 @@ nb_print: 5
   File "./2-main.py", line 14, in <module>
     nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
   File "//2-safe_print_list_integers.py", line 7, in safe_print_list_integers
-    print("{:d}".format(my_list[i]), end="")
-IndexError: list index out of range
-guillaume@ubuntu:~/$ 
+    print("{:d}".format(my_list[i]), end="") 
