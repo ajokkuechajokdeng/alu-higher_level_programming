@@ -4,8 +4,6 @@ Module 4-square
 
 Define a Square class
 """
-
-
 class Square:
     """
     The class Square
@@ -59,7 +57,6 @@ class Square:
     def __eq__(self, other):
         """
         Compare if two Square instances are equal
-
         Args:
             other (Square): Another Square instance
 
@@ -74,7 +71,6 @@ class Square:
 
         Args:
             other (Square): Another Square instance
-
         Return:
             True if both Square instances are not equal, False otherwise
         """
@@ -84,7 +80,6 @@ class Square:
         """
         Compare if a Square instance is less than another
         Square instance
-
         Args:
             other (Square): Another Square instance
 
