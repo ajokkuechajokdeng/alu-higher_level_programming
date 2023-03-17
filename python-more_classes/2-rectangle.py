@@ -5,7 +5,7 @@
 class Rectangle:
     """this represents a rectangle"""
 
-    def _init_(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """Initializing this rectangle class
         Args:
             width: represents the width of the rectangle
@@ -55,7 +55,7 @@ class Rectangle:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
-    def _str_(self) -> str:
+    def __str__(self) -> str:
         """presents a diagram of the rectangle defined for an object"""
         if self.__width == 0 or self.__height == 0:
             return ("")
