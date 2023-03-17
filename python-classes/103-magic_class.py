@@ -8,9 +8,7 @@ import math
 
 
 class MagicClass:
-    """
-    This class defines a circle with a given radius and provides methods to calculate its area and circumference.
-    """
+    """This class define a circle of a circumference."""
     def __init__(self, radius=0):
         """
         Initializes a MagicClass object with a given radius.
@@ -42,4 +40,3 @@ class MagicClass:
             float: The circumference of the circle.
         """
         return 2 * math.pi * self.__radius
-
