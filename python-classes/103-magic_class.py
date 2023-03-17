@@ -14,7 +14,8 @@ class MagicClass:
         Initializes a MagicClass object with a given radius.
 
         Args:
-            radius (float): The radius of the circle. Default value is 0.
+            radius (float): The radius of the circle.
+            Default value is 0.
 
         Raises:
             TypeError: If radius is not a number.
