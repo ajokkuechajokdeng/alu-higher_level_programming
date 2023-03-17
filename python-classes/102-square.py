@@ -82,49 +82,56 @@ class Square:
 
     def __lt__(self, other):
         """
-        Compare if a Square instance is less than another Square instance
+        Compare if a Square instance is less than another
+        Square instance
 
         Args:
             other (Square): Another Square instance
 
         Return:
-            True if the Square instance is less than the other Square instance, False otherwise
+            True if the Square instance is less than the 
+            other Square instance, False otherwise
         """
         return self.area() < other.area()
 
     def __le__(self, other):
         """
-        Compare if a Square instance is less than or equal to another Square instance
+        Compare if a Square instance is less than or equal 
+        to another Square instance
 
         Args:
             other (Square): Another Square instance
 
         Return:
-            True if the Square instance is less than or equal to the other Square instance, False otherwise
+            True if the Square instance is less than or equal
+            to the other Square instance, False otherwise
         """
         return self.area() <= other.area()
 
     def __gt__(self, other):
         """
-        Compare if a Square instance is greater than another Square instance
+        Compare if a Square instance is greater than another
+        Square instance
 
         Args:
             other (Square): Another Square instance
 
         Return:
-            True if the Square instance is greater than the other Square instance, False otherwise
+            True if the Square instance is greater than the 
+            other Square instance, False otherwise
         """
         return self.area() > other.area()
 
     def __ge__(self, other):
         """
-        Compare if a Square instance is greater than or equal to another Square instance
+        Compare if a Square instance is greater than or equal
+        to another Square instance
 
         Args:
             other (Square): Another Square instance
 
         Return:
-            True if the Square instance is greater than or equal to the other Square instance, False otherwise
+            True if the Square instance is greater than or equal 
+            to the other Square instance, False otherwise
         """
         return self.area() >= other.area()
-
