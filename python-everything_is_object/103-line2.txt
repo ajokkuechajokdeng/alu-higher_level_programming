@@ -1,1 +1,1 @@
-No int object
+1
