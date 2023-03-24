@@ -1,18 +1,78 @@
-#!/usr/bin/python3
-"""defines class BaseGeomtry
-with public instance methods for area and integer validation"""
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-class BaseGeometry:
-    """class with public instance method to raise exception
-    and public instance method to validate integer"""
-    def area(self):
-        """raises exception that area method is not implemented"""
-        raise Exception("area() is not implemented")
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+	...
+Exception: area() is not implemented
 
-    def integer_validator(self, name, value):
-        """validates integer"""
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+>>> bg.integer_validator("Silvia", 20)
+
+
+Check when value is not an int
+
+>>> bg.integer_validator("Silvia", "hi")
+Traceback (most recent call last):
+	...
+TypeError: Silvia must be an integer
+
+>>> bg.integer_validator("", True)
+Traceback (most recent call last):
+	...
+TypeError:  must be an integer
+
+>>> bg.integer_validator("str", None)
+Traceback (most recent call last):
+	...
+TypeError: str must be an integer
+
+Check when value is less than or equal to zero
+>>> bg.integer_validator("Silvia", -9)
+Traceback (most recent call last):
+	...
+ValueError: Silvia must be greater than 0
+
+>>> bg.integer_validator("int", 0)
+Traceback (most recent call last):
+	...
+ValueError: int must be greater than 0
+
+>>> bg.integer_validator("int", [1, 2, 3])
+Traceback (most recent call last):
+	...
+TypeError: int must be an integer
+
+>>> bg.integer_validator("int", (1, 2))
+Traceback (most recent call last):
+	...
+TypeError: int must be an integer
+
+>>> bg.integer_validator("int", {2, 4})
+Traceback (most recent call last):
+	...
+TypeError: int must be an integer
+
+Check when value is too large (inf)
+>>> bg.integer_validator("Silvia", float("inf"))
+Traceback (most recent call last):
+	...
+TypeError: Silvia must be an integer
+
+
+Check when no argument is passed
+>>> bg.integer_validator()
+Traceback (most recent call last):
+	...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Check when one argument is passed
+>>> bg.integer_validator("Silvia")
+Traceback (most recent call last):
+	...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator(9)
+Traceback (most recent call last):
+	...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
