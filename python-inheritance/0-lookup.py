@@ -1,11 +1,8 @@
-class MyClass1(object):
-    pass
+#!/usr/bin/python3
+"""define function to return list of available attributes and methods"""
 
-class MyClass2(object):
-    my_attr1 = 3
-    def my_meth(self):
-        pass
 
-print(lookup(MyClass1))
-print(lookup(MyClass2))
-print(lookup(int))
+def lookup(obj):
+    """returns list of available attributes and methods of an object"""
+
+    return (dir(obj))
