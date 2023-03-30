@@ -1,2 +1,2 @@
--- list the number of records with the same score in the table second_table
-SELECT score, COUNT(score) AS 'number' FROM second_table GROUP BY score ORDER BY number DESC;
+--  computes the score average of all records in the table second_table
+SELECT AVG(score) AS 'average' FROM second_table;
