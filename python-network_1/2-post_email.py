@@ -1,17 +1,14 @@
-cript that takes in a URL and an email, sends a POST repuest
-And displays the body of the response
-"""
+#!/usr/bin/python3
+'''a Python script that fetches a url'''
 
-import sys
-import urllib.parse
+
 import urllib.request
 
 
-if __name__ == "__main__":
-    url = sys.argv[1]
-    value = {"email": sys.argv[2]}
-    data = urllib.parse.urlencode(value).encode("ascii")
-
-    request = urllib.request.Request(url, data)
-    with urllib.request.urlopen(request) as resp:
-        print(resp.read().decode("utf-8"))
+if __name__ == '__main__':
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+        content = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(content)))
+        print("\t- content: {}".format(content))
+        print("\t- utf8 content: {}".format(content.decode("utf-8")))
