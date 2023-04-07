@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-'''a Python script that fetches a url'''
-
+"""I documented you"""
 
 import urllib.request
-
+import urllib.parse
+import sys
 
 if __name__ == '__main__':
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+    """"Documented"""
+    url = sys.argv[1]
+    message = {"email": sys.argv[2]}
+    data = urllib.parse.urlencode(message)
+    data = data.encode('ascii')
+    req = urllib.request.Request(url, data)
+    with urllib.request.urlopen(req) as response:
         content = response.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(content)))
-        print("\t- content: {}".format(content))
-        print("\t- utf8 content: {}".format(content.decode("utf-8")))
+        print("{}".format(content.decode("utf-8")))
