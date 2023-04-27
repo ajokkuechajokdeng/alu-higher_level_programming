@@ -13,7 +13,7 @@ of ``m_a`` by ``m_b``.
 
 ::
 
-    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+    >>> lazy_matrix_mul = _import_('101-lazy_matrix_mul').lazy_matrix_mul
     >>> m_a = [
     ... [1, 2],
     ... [3, 4],
@@ -134,7 +134,7 @@ If either parameter is ``None``, a TypeError is raised.
     Traceback (most recent call last):
     TypeError: Object arrays are not currently supported
 
-Not just any list - they *must* be lists of lists! Otherwise, behavior is
+Not just any list - they must be lists of lists! Otherwise, behavior is
 undefined.
 
 ::
@@ -153,7 +153,7 @@ undefined.
     >>> print(lazy_matrix_mul([1, 2], [3, 4]))
     11
 
-And not just any list of lists - they *must* be lists of lists containing
+And not just any list of lists - they must be lists of lists containing
 integers or floats! Otherwise, a ValueError or TypeError is raised
 
 ::
